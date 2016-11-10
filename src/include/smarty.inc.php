@@ -38,10 +38,15 @@ $smarty = new Smarty;
 // If you change $Templateroot you need also to change
 // template_dir and config_dir in smarty.inc.php
 //
-$Templateroot = $_SERVER['DOCUMENT_ROOT']."phpRechnung";
+$Templateroot = $_SERVER['DOCUMENT_ROOT']."phprechnung/src";
 
-$smarty->template_dir = "$Templateroot/include/smarty/templates";
-$smarty->config_dir = "$Templateroot/include/smarty/configs";
+//$smarty->template_dir = "$Templateroot/include/smarty/templates";
+//$smarty->config_dir = "$Templateroot/include/smarty/configs";
+
+$smarty->template_dir = "/var/www/html/phprechnung/src/include/smarty/templates";
+$smarty->config_dir = "/var/www/html/phprechnung/src/include/smarty/configs";
+
+
 
 // IMPORTANT: $Cacheroot needs write access by the webserver
 // For more informationen see
@@ -57,8 +62,8 @@ $smarty->config_dir = "$Templateroot/include/smarty/configs";
 //
 $Cacheroot = $_SERVER['DOCUMENT_ROOT']."phpRechnung";
 
-$smarty->compile_dir = "$Cacheroot/include/smarty/templates_c";
-$smarty->cache_dir = "$Cacheroot/include/smarty/cache";
+$smarty->compile_dir = "/var/www/html/phprechnung/src/include/smarty/templates_c/";
+$smarty->cache_dir = "/var/www/html/phprechnung/src/include/smarty/cache";
 
 // Is set to true only during development
 //

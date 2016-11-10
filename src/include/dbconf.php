@@ -30,7 +30,7 @@ define("_DBUSER", "root");
 
 // Database Password
 //
-define("_DBPASS", "");
+define("_DBPASS", "a");
 
 // Name of the database where you import phpRechnung tables
 //

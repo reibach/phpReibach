@@ -120,7 +120,7 @@ $Browser = getenv('HTTP_USER_AGENT');
 
 // Your own Webserver
 //
-$web = "http://localhost/phpRechnung";
+$web = "http://172.22.119.118/phprechnung/src";
 
 // Key to encrypt and decrypt data
 // Note: If you change this key, thereafter
