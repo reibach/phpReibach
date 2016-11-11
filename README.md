@@ -13,7 +13,7 @@ Deutsch, Englisch, Französisch, Italienisch, Kroatisch, Niederländisch, Polnis
 
 Aus Basis  Edy Corak  "Edy's phpRechnung" unter https://www.loenshotel.de/phpRechnung
 
-Letzter Version von "Edy's phpRechnung" war 1.6.4 (Stand von 2011)
+Letzter Version von "Edy's phpRechnung" war 1.6.5 (Stand 2015-10-09)
 
 Lizenz: GPLv2
 
