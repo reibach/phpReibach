@@ -22,7 +22,7 @@
 <tr><td align="left" width="22%">
 <table border="0" width="80%" cellspacing="0" cellpadding="0" summary="Tabelle 2"><tbody>
 <tr><td id="td_navi1" align="center"><a accesskey="W" href="{$Web}/index.php?{$Session}">
-<img border="0" src="{$Web}/images/phprechnung.png" title="{$Programname}" alt="{$Programname}" width="190" height="40" /></a></td>
+<img border="0" src="{$Web}/images/phpReibach.png" title="{$Programname}" alt="{$Programname}" width="91" height="60" /></a></td>
 <td id="td_navi2" align="center"><a accesskey="V" href="http://validator.w3.org/" target="_blank">
 <img border="0" src="{$Web}/images/valid-xhtml10-blue.png" title="Valid XHTML 1.0 Transitional" alt="Valid XHTML 1.0 Transitional" width="88" height="31" /></a>
 </td></tr></tbody></table></td>
