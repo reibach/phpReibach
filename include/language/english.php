@@ -28,7 +28,7 @@
 
 $a = array (
 	"welcome" => "Welcome to",
-	"programname" => "phpRechnung 1.6.5",
+	"programname" => "phpReibach 1.6.5",
 	"phprechnung" => "phpRechnung 1.6.5 - Copyright &copy; 2001 - 2015 <a class='nmenulink' title='phpRechnung Home' href='https://www.loenshotel.de/phpRechnung/' target='_blank'>&nbsp;Edy Corak&nbsp;</a>. All rights reserved.",
 
 	"admin" => "Administrator",

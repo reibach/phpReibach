@@ -52,8 +52,11 @@ href="reports/index.php?{$Session}">{$Reports}</a></td></tr>
 href="configuration.php?{$Session}">{$Configuration}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu"><a accesskey="Y" title="{$Syslog}"
 href="syslog/list.php?{$Session}">{$Syslog}</a></td></tr>
+<tr><td align="left" class="phprechnung_menu"><a title="{$Programname} - {$About}"
+href="about.php?{$Session}">{$About}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu_sel"><a title="{$Programname} - {$License}"
 href="license.php?{$Session}">{$License}</a></td></tr>
+
 {if $smarty.session.Username and ( $smarty.session.Username != $Root )}
 	<tr><td align="left" class="phprechnung_menu"><a accesskey="U" title="{$Superuser}"
 	href="login/sustart.php?{$Session}">{$Superuser}</a></td></tr>
