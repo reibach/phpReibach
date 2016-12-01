@@ -22,7 +22,7 @@
 */
 
 	global $a, $PrintCompanyData, $CompanyName, $CompanyAddress, $CompanyPostal, $CompanyCity, $CompanyCountry,
-	$CompanyPhone, $CompanyFax, $CompanyEmail, $CompanyURL, $BankName, $BankAccount, $BankNumber, $PDFFont,
+	$CompanyPhone, $CompanyFax, $CompanyEmail, $CompanyURL, $BankName, $BankAccount, $BankNumber, $BankIBAN, $BankBIC, $PDFFont,
 	$PDFFontsize1, $PDFFontsize2;
 
 	if ($PrintCompanyData === "1" || $PrintCompanyData === "On")
@@ -52,7 +52,7 @@
 		$this->Cell(0,5,$a['company_email'].': '.$CompanyEmail,0,0,'L');
 		$this->SetY(-14);
 		$this->Cell(150);
-		$this->Cell(0,5,$a['bank_account'].': '.$BankAccount,0,0,'L');
+		$this->Cell(0,5,$a['bank_iban'].': '.$BankIBAN,0,0,'L');
 		$this->SetY(-10);
 		$this->Cell(0,5,$CompanyCountry,0,0,'L');
 		$this->SetY(-10);
@@ -60,7 +60,7 @@
 		$this->Cell(0,5,$a['company_url'].': '.$CompanyURL,0,0,'L');
 		$this->SetY(-10);
 		$this->Cell(150);
-		$this->Cell(0,5,$a['bank_number'].': '.$BankNumber,0,0,'L');
+		$this->Cell(0,5,$a['bank_bic'].': '.$BankBIC,0,0,'L');
 	}
 
 ?>

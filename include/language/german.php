@@ -30,9 +30,7 @@ $a = array (
 	"welcome" => "Willkommen bei",
 	"programname" => "phpReibach 1.6.5",
 	"phprechnung" => "phpRechnung 1.6.5 - Copyright &copy; 2001 - 2015 <a class='nmenulink' title='phpRechnung Home' href='https://www.loenshotel.de/phpRechnung/' target='_blank'>&nbsp;Edy Corak&nbsp;</a>. Alle Rechte vorbehalten.",
-
 	"admin" => "Administrator",
-
 	"language" => "Sprache",
 	"choose_language" => "Sprache wählen",
 
@@ -59,7 +57,7 @@ $a = array (
 	"user_admin" => "Benutzerverwaltung",
 	"super_user" => "Super User",
 	"syslog" => "Syslog",
-	"about" => "&Uuml;ber",
+	"about" => "Über",
 	"license" => "Lizenz",
 
 	"list" => "Liste",

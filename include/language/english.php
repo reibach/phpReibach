@@ -60,6 +60,9 @@ $a = array (
 	"super_user" => "Super User",
 	"syslog" => "Syslog",
 	"license" => "License",
+	"about" => "About",
+	"mymenu" => "Mymenu",
+	
 
 	"list" => "List",
 	"new" => "New",

@@ -29,6 +29,8 @@ $smarty->assign("Title","$a[about]");
 $smarty->assign("About","$a[about]");
 //$smarty->assign("Accept","$a[accept]");
 
+$smarty->assign("License","$a[license]");
+
 $smarty->display('about.tpl');
 
 ?>

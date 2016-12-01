@@ -66,6 +66,8 @@ href="user/list.php?{$Session}">{$Useradministration}</a></td></tr>
 href="posgroup/list.php?{$Session}">{$PositionGroupSub}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu"><a accesskey="Y" title="{$Syslog}"
 href="syslog/list.php?{$Session}">{$Syslog}</a></td></tr>
+<tr><td align="left" class="phprechnung_menu"><a title="{$Programname} - {$About}"
+href="about.php?{$Session}">{$About}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu"><a title="{$Programname} - {$License}"
 href="license.php?{$Session}">{$License}</a></td></tr>
 {if $smarty.session.Username and ( $smarty.session.Username != $Root )}

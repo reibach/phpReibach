@@ -54,7 +54,7 @@ href="configuration.php?{$Session}">{$Configuration}</a></td></tr>
 href="syslog/list.php?{$Session}">{$Syslog}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu_sel"><a title="{$Programname} - {$About}"
 href="about.php?{$Session}">{$About}</a></td></tr>
-<tr><td align="left" class="phprechnung_menu"><a accesskey="L" title="{$Programname} - {$License}"
+<tr><td align="left" class="phprechnung_menu"><a title="{$Programname} - {$License}"
 href="license.php?{$Session}">{$License}</a></td></tr>
 
 
@@ -65,8 +65,7 @@ href="license.php?{$Session}">{$License}</a></td></tr>
 </tbody></table></td>
 {* Menubar end *}
 <td id="td1_2" width="2%"></td><td class="phprechnung_tabelle" width="78%" valign="top" align="center">
-<!-- 2DO: Alle Infos zur Software sollten an anderer Stelle plaziert werden und nicht den Blick auf das Wesentliche verstellen
--->
+<!-- 2DO: Alle Infos zur Software sollten an anderer Stelle plaziert werden und nicht den Blick auf das Wesentliche verstellen //-->
 <p align="center">
 [&nbsp;<a class="ninfolink" href="https://www.loenshotel.de/phpRechnung/" target="_blank" title="Official phpRechnung Home Page">Official phpRechnung Home Page</a>&nbsp;]&nbsp;
 [&nbsp;<a class="ninfolink" href="http://sourceforge.net/tracker/?group_id=152251&amp;atid=783716" target="_blank" title="Reporting phpRechnung Bugs">Bugs</a>&nbsp;]&nbsp;
@@ -76,11 +75,14 @@ href="license.php?{$Session}">{$License}</a></td></tr>
 [&nbsp;<a class="ninfolink" href="http://sourceforge.net/export/rss2_project.php?group_id=152251" target="_blank" title="Project RSS Feeds">RSS Feeds</a>&nbsp;]
 </p>
 	
-<h2>{$Programname} - {$License}</h2>
+<h2>{$Programname} - {$About}</h2>
 <table width="100%" border="0" class="wTD" cellpadding="3" cellspacing="3" summary="Tabelle 5"><tbody>
 <tr><td>&nbsp;</td></tr>
 <tr><td align="left" colspan="2">
 <br />
+.. diese Software 
+<p>entstanden auf phpRechnung...</p>
+<p>Weitere Infos finden sich unter <a href="http://reibach.federa.de" target="_blank">reibach.federa.de</a></p>
 </td></tr>
 <tr><td>&nbsp;</td></tr>
 </tbody></table>
