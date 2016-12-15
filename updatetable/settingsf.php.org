@@ -54,7 +54,7 @@ else
 		$CompanyFax = $f['BTELEFAX'];
 		$CompanyEmail = $f['BEMAIL'];
 		$CompanyURL = $f['BURL'];
-		$CompanyWAP = $f['BWAP'];
+		$CompanyMobile = $f['BMOBILE'];
 		$EmailInternal = $f['EMAIL_INTERN'];
 		$EmailUseSignature = $f['BSIGNATUR'];
 		$EmailSignature = $f['SIGNATUR'];
@@ -153,7 +153,7 @@ else
 		$EmailSignature = ereg_replace("'", "\'", $EmailSignature);
 		$PDFAttachmentText = ereg_replace("'", "\'", $PDFAttachmentText);
 
-		$query = $db->Execute("UPDATE setting SET PRINT_COMPANY_DATA='$PrintCompanyData', PRINT_POSITION_NAME='$PrintPositionName', COMPANY_LOGO='$CompanyLogo', COMPANY_LOGO_WIDTH='$CompanyLogoWidth', COMPANY_LOGO_HEIGHT='$CompanyLogoHeight', EMAIL_INTERNAL='$EmailInternal', EMAIL_USE_SIGNATURE='$EmailUseSignature', EMAIL_SIGNATURE='$EmailSignature', INVENTORY_CHECK_ACTIVE='2', REMINDER='$Reminder', REMINDER_DAYS='$ReminderDays', REMINDER_PRICE='$ReminderPrice', ENTRYS_PER_PAGE='$EntrysPerPage', SESSION_SEC='$SessionSec', COMPANY_DATE='$CompanyDate', COMPANY_NAME='$CompanyName', COMPANY_ADDRESS='$CompanyAddress', COMPANY_POSTAL='$CompanyPostal', COMPANY_CITY='$CompanyCity', COMPANY_COUNTRY='$CompanyCountry', COMPANY_PHONE='$CompanyPhone', COMPANY_FAX='$CompanyFax', COMPANY_EMAIL='$CompanyEmail', COMPANY_URL='$CompanyURL', COMPANY_WAP='$CompanyWAP', COMPANY_CURRENCY='$CompanyCurrency', COMPANY_SALESPRICE='$SalesPrices', TAX_FREE='2', COMPANY_TAXNR='$CompanyTaxnr', COMPANY_BUSINESS_TAXNR='$BusinessTaxnr', COMPANY_BANKNAME='$BankName', COMPANY_BANKACCOUNT='$BankAccount', COMPANY_BANKNUMBER='$BankNumber', COMPANY_BANKIBAN='$BankIBAN', COMPANY_BANKBIC='$BankBIC', PDF_COMPANY_LOGO_WIDTH='$PDFCompanyLogoWidth', PDF_COMPANY_LOGO_HEIGHT='$PDFCompanyLogoHeight', PDF_FONT='$PDFFont', PDF_FONT_SIZE1='$PDFText1', PDF_FONT_SIZE2='$PDFText2', PDF_TYPE_HEIGHT='$PDFText3', PDF_DIR='$PDFDirectory', PDF_ATTACHMENT_TEXT='$PDFAttachmentText', CREATEDBY='admin', MODIFIEDBY='admin' WHERE SETTINGID=$settingID");
+		$query = $db->Execute("UPDATE setting SET PRINT_COMPANY_DATA='$PrintCompanyData', PRINT_POSITION_NAME='$PrintPositionName', COMPANY_LOGO='$CompanyLogo', COMPANY_LOGO_WIDTH='$CompanyLogoWidth', COMPANY_LOGO_HEIGHT='$CompanyLogoHeight', EMAIL_INTERNAL='$EmailInternal', EMAIL_USE_SIGNATURE='$EmailUseSignature', EMAIL_SIGNATURE='$EmailSignature', INVENTORY_CHECK_ACTIVE='2', REMINDER='$Reminder', REMINDER_DAYS='$ReminderDays', REMINDER_PRICE='$ReminderPrice', ENTRYS_PER_PAGE='$EntrysPerPage', SESSION_SEC='$SessionSec', COMPANY_DATE='$CompanyDate', COMPANY_NAME='$CompanyName', COMPANY_ADDRESS='$CompanyAddress', COMPANY_POSTAL='$CompanyPostal', COMPANY_CITY='$CompanyCity', COMPANY_COUNTRY='$CompanyCountry', COMPANY_PHONE='$CompanyPhone', COMPANY_FAX='$CompanyFax', COMPANY_EMAIL='$CompanyEmail', COMPANY_URL='$CompanyURL', COMPANY_MOBILE='$CompanyMobile', COMPANY_CURRENCY='$CompanyCurrency', COMPANY_SALESPRICE='$SalesPrices', TAX_FREE='2', COMPANY_TAXNR='$CompanyTaxnr', COMPANY_BUSINESS_TAXNR='$BusinessTaxnr', COMPANY_BANKNAME='$BankName', COMPANY_BANKACCOUNT='$BankAccount', COMPANY_BANKNUMBER='$BankNumber', COMPANY_BANKIBAN='$BankIBAN', COMPANY_BANKBIC='$BankBIC', PDF_COMPANY_LOGO_WIDTH='$PDFCompanyLogoWidth', PDF_COMPANY_LOGO_HEIGHT='$PDFCompanyLogoHeight', PDF_FONT='$PDFFont', PDF_FONT_SIZE1='$PDFText1', PDF_FONT_SIZE2='$PDFText2', PDF_TYPE_HEIGHT='$PDFText3', PDF_DIR='$PDFDirectory', PDF_ATTACHMENT_TEXT='$PDFAttachmentText', CREATEDBY='admin', MODIFIEDBY='admin' WHERE SETTINGID=$settingID");
 		
 		Header("Location: $web/updatetable/messagef.php?$sessname=$sessid");
 	}

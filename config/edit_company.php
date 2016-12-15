@@ -54,6 +54,7 @@ $smarty->assign("Company_Phone","$a[company_phone]");
 $smarty->assign("Company_Fax","$a[company_fax]");
 $smarty->assign("Company_Email","$a[company_email]");
 $smarty->assign("Company_URL","$a[company_url]");
+$smarty->assign("Company_Mobile","$a[company_mobile]");
 $smarty->assign("Company_Currency","$a[company_currency]");
 $smarty->assign("Company_Tax_Free","$a[company_tax_free]");
 $smarty->assign("Sales_Prices","$a[sales_prices]");
@@ -65,6 +66,7 @@ $smarty->assign("Bank_Number","$a[bank_number]");
 $smarty->assign("Bank_IBAN","$a[bank_iban]");
 $smarty->assign("Bank_BIC","$a[bank_bic]");
 
+
 // Database connection
 //
 DBConnect();
@@ -72,17 +74,41 @@ DBConnect();
 // Get company related entrys from setting table
 //
 $query = $db->Execute("SELECT DATE_FORMAT(COMPANY_DATE,'%d.%m.%Y') AS COMPANY_DATE, COMPANY_NAME, COMPANY_ADDRESS, COMPANY_POSTAL, COMPANY_CITY, COMPANY_COUNTRY, COMPANY_PHONE,
-		COMPANY_FAX, COMPANY_EMAIL, COMPANY_URL, COMPANY_TAXNR, COMPANY_BUSINESS_TAXNR, COMPANY_BANKNAME, COMPANY_BANKACCOUNT, COMPANY_BANKNUMBER, COMPANY_BANKIBAN, COMPANY_BANKBIC, COMPANY_CURRENCY,
+		COMPANY_FAX, COMPANY_EMAIL, COMPANY_URL, COMPANY_MOBILE, COMPANY_TAXNR, COMPANY_BUSINESS_TAXNR, COMPANY_BANKNAME, COMPANY_BANKACCOUNT, COMPANY_BANKNUMBER, COMPANY_BANKIBAN, COMPANY_BANKBIC, COMPANY_CURRENCY,
 		COMPANY_SALESPRICE, TAX_FREE, SETTINGID FROM setting WHERE SETTINGID=$settingID");
 
-// If an error has occurred, display the error message
-//
+$i = 0;
+$str = "";
+foreach ($query as $f) {
+	
+	$str = $str.$f['COMPANY_MOBILE']."-----".$i."<p></p>";
+	echo $str;
+	$i++;
+
+	foreach ($f as $key => $value) {
+		 //echo "Schlüssel: $key; Wert: $value<br />\n";
+		
+	}
+
+    foreach ($f as $v2) {
+        //echo "$v2\n";
+    }
+}
+
+//print_r $query;
+
+
 if (!$query)
 	print($db->ErrorMsg());
 else
 	foreach($query as $f)
-	{
+	{	
+		//$test = var_dump ($f);
+		//print_r $f;
+		echo $f['COMPANY_SALESPRICE'];
 		$sp = $f['COMPANY_SALESPRICE'];
+		//var_dump ($sp);
+		//exit;
 		if (empty($D_Company_Date))
 		{
 			$smarty->assign("D_Company_Date",$f['COMPANY_DATE']);
@@ -162,6 +188,17 @@ else
 		else
 		{
 			$smarty->assign("D_Company_URL","$D_Company_URL");
+		}
+		if (empty($D_Company_Mobile))
+		{
+			
+			$smarty->assign("D_Company_Mobile",$f['COMPANY_MOBILE']);
+			//$smarty->assign("D_Company_Mobile","TESTME");
+		}
+		else
+		{
+			$smarty->assign("D_Company_Mobile","$D_Company_Mobile");
+			//$smarty->assign("D_Company_Mobile","TEST");
 		}
 		if (empty($D_Company_Currency))
 		{

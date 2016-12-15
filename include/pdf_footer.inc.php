@@ -22,7 +22,7 @@
 */
 
 	global $a, $PrintCompanyData, $CompanyName, $CompanyAddress, $CompanyPostal, $CompanyCity, $CompanyCountry,
-	$CompanyPhone, $CompanyFax, $CompanyEmail, $CompanyURL, $BankName, $BankAccount, $BankNumber, $BankIBAN, $BankBIC, $PDFFont,
+	$CompanyPhone, $CompanyFax, $CompanyMobile, $CompanyEmail, $CompanyURL, $BankName, $BankAccount, $BankNumber, $BankIBAN, $BankBIC, $PDFFont,
 	$PDFFontsize1, $PDFFontsize2;
 
 	if ($PrintCompanyData === "1" || $PrintCompanyData === "On")
@@ -35,15 +35,15 @@
 		$this->Cell(70);
 		$this->Cell(0,5,$a['company_phone'].': '.$CompanyPhone,0,0,'L');
 		$this->SetY(-22);
-		$this->Cell(150);
+		$this->Cell(140);
 		$this->Cell(0,5,$a['bank_name'].':',0,0,'L');
 		$this->SetY(-18);
 		$this->Cell(0,5,$CompanyAddress,0,0,'L');
 		$this->SetY(-18);
 		$this->Cell(70);
-		$this->Cell(0,5,$a['company_fax'].': '.$CompanyFax,0,0,'L');
+		$this->Cell(0,5,$a['company_mobile'].': '.$CompanyMobile,0,0,'L');
 		$this->SetY(-18);
-		$this->Cell(150);
+		$this->Cell(140);
 		$this->Cell(0,5,$BankName,0,0,'L');
 		$this->SetY(-14);
 		$this->Cell(0,5,$CompanyPostal.' '.$CompanyCity,0,0,'L');
@@ -51,7 +51,7 @@
 		$this->Cell(70);
 		$this->Cell(0,5,$a['company_email'].': '.$CompanyEmail,0,0,'L');
 		$this->SetY(-14);
-		$this->Cell(150);
+		$this->Cell(140);
 		$this->Cell(0,5,$a['bank_iban'].': '.$BankIBAN,0,0,'L');
 		$this->SetY(-10);
 		$this->Cell(0,5,$CompanyCountry,0,0,'L');
@@ -59,7 +59,7 @@
 		$this->Cell(70);
 		$this->Cell(0,5,$a['company_url'].': '.$CompanyURL,0,0,'L');
 		$this->SetY(-10);
-		$this->Cell(150);
+		$this->Cell(140);
 		$this->Cell(0,5,$a['bank_bic'].': '.$BankBIC,0,0,'L');
 	}
 

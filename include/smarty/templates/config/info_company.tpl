@@ -92,6 +92,7 @@ href="help.php?{$Session}">{$Help}</a></td></tr>
 <tr><td valign="top" align="right" width="40%">{$Company_Fax}:</td><td class="dbTxt" valign="top" align="left" width="60%">{$CompanyFax}</td></tr>
 <tr><td valign="top" align="right" width="40%">{$Company_Email}:</td><td class="dbTxt" valign="top" align="left" width="60%">{$CompanyEmail}</td></tr>
 <tr><td valign="top" align="right" width="40%">{$Company_URL}:</td><td class="dbTxt" valign="top" align="left" width="60%">{$CompanyURL}</td></tr>
+<tr><td valign="top" align="right" width="40%">QQQQ {$Company_Mobil}:</td><td class="dbTxt" valign="top" align="left" width="60%">{$CompanyMobil}</td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td valign="top" align="right" width="40%">{$Company_Currency}:</td><td class="dbTxt" valign="top" align="left" width="60%">{$CompanyCurrency}</td></tr>
 <tr><td valign="top" align="right" width="40%">{$Company_Tax_Free}:</td><td class="dbTxt" valign="top" align="left" width="60%">{$CompanyTaxFree}</td></tr>

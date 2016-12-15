@@ -54,6 +54,7 @@ $smarty->assign("Company_Phone","$a[company_phone]");
 $smarty->assign("Company_Fax","$a[company_fax]");
 $smarty->assign("Company_Email","$a[company_email]");
 $smarty->assign("Company_URL","$a[company_url]");
+$smarty->assign("Company_Mobile","$a[company_mobile]");
 $smarty->assign("Company_Currency","$a[company_currency]");
 $smarty->assign("Company_Tax_Free","$a[company_tax_free]");
 $smarty->assign("Sales_Prices","$a[sales_prices]");
@@ -72,7 +73,7 @@ DBConnect();
 // Get company related entrys from setting table
 //
 $query = $db->Execute("SELECT DATE_FORMAT(COMPANY_DATE,'%d.%m.%Y') AS COMPANY_DATE, COMPANY_NAME, COMPANY_ADDRESS, COMPANY_POSTAL, COMPANY_CITY, COMPANY_COUNTRY, COMPANY_PHONE,
-		COMPANY_FAX, COMPANY_EMAIL, COMPANY_URL, COMPANY_TAXNR, COMPANY_BUSINESS_TAXNR, COMPANY_BANKNAME, COMPANY_BANKACCOUNT, COMPANY_BANKNUMBER, COMPANY_BANKIBAN,
+		COMPANY_FAX, COMPANY_EMAIL, COMPANY_URL, COMPANY_MOBILE, COMPANY_TAXNR, COMPANY_BUSINESS_TAXNR, COMPANY_BANKNAME, COMPANY_BANKACCOUNT, COMPANY_BANKNUMBER, COMPANY_BANKIBAN,
 		COMPANY_BANKBIC, COMPANY_CURRENCY, COMPANY_SALESPRICE, TAX_FREE, SETTINGID FROM setting WHERE SETTINGID=$settingID");
 
 // If an error has occurred, display the error message
@@ -94,6 +95,7 @@ else
 		$smarty->assign("CompanyFax","$f[COMPANY_FAX]");
 		$smarty->assign("CompanyEmail","$f[COMPANY_EMAIL]");
 		$smarty->assign("CompanyURL","$f[COMPANY_URL]");
+		$smarty->assign("CompanyMobile","$f[COMPANY_MOBILE]");
 		$smarty->assign("CompanyCurrency","$f[COMPANY_CURRENCY]");
 		$smarty->assign("CompanyTaxFree","$choice_yes_no[$ctf]");
 		$smarty->assign("SalesPrices","$sales_price[$sp]");

@@ -103,6 +103,7 @@ href="help.php?{$Session}">{$Help}</a></td></tr>
 <tr><td valign="middle" align="right" width="40%">{$Company_Fax}:</td><td valign="middle" align="left" width="60%"><input title="{$Company_Fax}" class="form_input" name="D_Company_Fax" size="39" value="{$D_Company_Fax}" /></td></tr>
 <tr><td valign="middle" align="right" width="40%">{$Company_Email}:</td><td valign="middle" align="left" width="60%"><input title="{$Company_Email}" class="form_input" name="D_Company_Email" size="39" value="{$D_Company_Email}" /></td></tr>
 <tr><td valign="middle" align="right" width="40%">{$Company_URL}:</td><td valign="middle" align="left" width="60%"><input title="{$Company_URL}" class="form_input" name="D_Company_URL" size="39" value="{$D_Company_URL}" /></td></tr>
+<tr><td valign="middle" align="right" width="40%">{$Company_Mobile}:</td><td valign="middle" align="left" width="60%"><input title="{$Company_Mobile}" class="form_input" name="D_Company_Mobile" size="39" value="{$D_Company_Mobile}" /></td></tr>
 <tr><td>&nbsp;</td></tr>
 <tr><td valign="middle" align="right" width="40%"><b>{$Company_Currency}</b>:</td><td valign="middle" align="left" width="60%"><input title="{$Company_Currency}" class="form_input" name="D_Company_Currency" size="39" value="{$D_Company_Currency}" /></td></tr>
 <tr><td valign="middle" align="right" width="40%">{$Company_Tax_Free}:</td><td valign="middle" align="left" width="60%"><select title="{$Company_Tax_Free}" class="choice200" name="D_Company_Tax_Free">
