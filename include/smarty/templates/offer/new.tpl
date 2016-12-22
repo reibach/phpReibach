@@ -83,6 +83,7 @@
 				href="../invoice/list.php?{$Session}">{$Invoice}</a>
 				</td>
 			</tr>
+<!--
 			<tr>
 				<td align="left" class="phprechnung_menu"><a accesskey="M" title="{$Payment}"
 				href="../payment/list.php?{$Session}">{$Payment}</a>
@@ -99,6 +100,7 @@
 				</td>
 			</tr>
 			<tr>
+-->
 				<td align="left" class="phprechnung_menu"><a accesskey="S" title="{$Configuration}"
 				href="../configuration.php?{$Session}">{$Configuration}</a>
 				</td>

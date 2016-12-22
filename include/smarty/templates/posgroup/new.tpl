@@ -46,12 +46,15 @@ href="../position/list.php?{$Session}">{$Position}</a></td></tr>
 href="../offer/list.php?{$Session}">{$Offer}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu"><a accesskey="I" title="{$Invoice}"
 href="../invoice/list.php?{$Session}">{$Invoice}</a></td></tr>
+<!--
 <tr><td align="left" class="phprechnung_menu"><a accesskey="M" title="{$Payment}"
 href="../payment/list.php?{$Session}">{$Payment}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu"><a accesskey="C" title="{$Cashbook}"
 href="../cashbook/list.php?{$Session}">{$Cashbook}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu"><a accesskey="R" title="{$Reports}"
 href="../reports/index.php?{$Session}">{$Reports}</a></td></tr>
+-->
+
 <tr><td align="left" class="phprechnung_menu"><a accesskey="S" title="{$Configuration}"
 href="../configuration.php?{$Session}">{$Configuration}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu_sub"><a accesskey="1" title="{$PositionGroupSub} - {$List}"
