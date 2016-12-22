@@ -50,6 +50,11 @@ href="cashbook/list.php?{$Session}">{$Cashbook}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu"><a accesskey="R" title="{$Reports}"
 href="reports/index.php?{$Session}">{$Reports}</a></td></tr>
 -->
+<?php
+echo "TESTME".$ArticleGroupsSub;
+exit;
+?>
+
 <tr><td align="left" class="phprechnung_menu_sel"><a accesskey="S" title="{$Configuration}"
 href="configuration.php?{$Session}">{$Configuration}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu_sub"><a accesskey="1" title="{$Message}"
@@ -66,6 +71,8 @@ href="config/list.php?{$Session}">{$Settings}</a></td></tr>
 href="user/list.php?{$Session}">{$Useradministration}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu_sub"><a accesskey="7" title="{$PositionGroupSub}"
 href="posgroup/list.php?{$Session}">{$PositionGroupSub}</a></td></tr>
+<tr><td align="left" class="phprechnung_menu_sub"><a accesskey="7" title="{$ArticleGroupsSub}"
+href="artgroups/list.php?{$Session}">{$ArticleGroupsSub}</a></td></tr>
 <!--
 <tr><td align="left" class="phprechnung_menu"><a accesskey="Y" title="{$Syslog}"
 href="syslog/list.php?{$Session}">{$Syslog}</a></td></tr>

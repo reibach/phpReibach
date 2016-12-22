@@ -225,6 +225,24 @@ $a = array (
 	"email_pdf" => "E-Mail PDF-Attachment",
 
 
+	// Articles
+	//
+	"art_active" => "article active",
+	"art_inactive" => "article inactive",
+	"art_all" => "Show all articles",
+	"art_name" => "article / Article",
+	"art_text" => "Description",
+	"art_quantity" => "Quantity",
+	"art_price" => "Price",
+	"art_amount" => "Amount",
+	"art_choose" => "Choose article",
+	"art_new" => "New article",
+	"art_print" => "Print article",
+	"art_group" => "Article group",
+	"art_groups" => "Article groups",
+	"art_inventory" => "Inventory",
+	"art_search" => "Input: article or description to be searched for.",
+
 	// Position
 	//
 	"pos_active" => "Position active",

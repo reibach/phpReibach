@@ -220,6 +220,25 @@ $a = array (
 	"email_pdf" => "PDF-Anhang",
 
 
+	// Articles
+	//
+	"art_active" => "Artikel active",
+	"art_inactive" => "Artikel inactive",
+	"art_all" => "Show all Artikel",
+	"art_name" => "Artikel",
+	"art_text" => "Beschreibung",
+	"art_quantity" => "Menge",
+	"art_price" => "Preis",
+	"art_amount" => "Betrag",
+	"art_choose" => "W&auml; Artikel",
+	"art_new" => "Neuer Artikel",
+	"art_print" => "Artikel drucken",
+	"art_group" => "Artikelgruppe",
+	"art_groups" => "Artikelgruppen",
+	"art_inventory" => "Lagerbestand",
+	"art_search" => "Eingabe: Artikel oder Beschreibung nach der gesucht werden soll.",
+
+
 	// Position Tabelle
 	//
 	"pos_active" => "Position aktiv",
@@ -236,6 +255,8 @@ $a = array (
 	"pos_group" => "Gruppe",
 	"pos_inventory" => "Lagerbestand",
 	"pos_search" => "Eingabe: Position / Artikel oder Beschreibung nach der gesucht werden soll.",
+
+
 
 
 	// Mwst Tabelle
