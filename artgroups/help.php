@@ -7,7 +7,7 @@ CheckUser();
 CheckSession();
 UserSite();
 
-$smarty->assign("Title","$a[position] - $a[art_groups] - $a[help]");
+$smarty->assign("Title","$a[article] - $a[art_groups] - $a[help]");
 $smarty->assign("Helpfile","$_SESSION[Help]/artgroups.tpl");
 
 $smarty->display('artgroups/help.tpl');

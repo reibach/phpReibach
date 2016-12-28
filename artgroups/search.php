@@ -28,7 +28,7 @@ CheckUser();
 CheckSession();
 UserSite();
 
-$smarty->assign("Title","$a[position] - $a[art_groups] - $a[search]");
+$smarty->assign("Title","$a[article] - $a[art_groups] - $a[search]");
 
 $smarty->display('artgroups/search.tpl');
 

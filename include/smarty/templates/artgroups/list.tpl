@@ -1,23 +1,3 @@
-{*
-	list.tpl
-
-	phpRechnung - is easy-to-use Web-based multilingual accounting software.
-	Copyright (C) 2001 - 2010 Edy Corak < edy at loenshotel dot de >
-
-	This program is free software; you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation; either version 2 of the License, or
-	(at your option) any later version.
-
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with this program; if not, write to the Free Software
-	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-*}
 {include file="header.tpl"}
 <body>
 {include file="htable.tpl"}
@@ -36,8 +16,10 @@
 href="../index.php?{$Session}">{$Startpage}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu"><a accesskey="A" title="{$Addressbook}"
 href="../addressbook/list.php?{$Session}">{$Addressbook}</a></td></tr>
+<!--
 <tr><td align="left" class="phprechnung_menu"><a accesskey="P" title="{$Position}"
 href="../position/list.php?{$Session}">{$Position}</a></td></tr>
+-->
 <tr><td align="left" class="phprechnung_menu"><a accesskey="O" title="{$Offer}"
 href="../offer/list.php?{$Session}">{$Offer}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu"><a accesskey="I" title="{$Invoice}"
@@ -54,13 +36,13 @@ href="../reports/index.php?{$Session}">{$Reports}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu"><a accesskey="S" title="{$Configuration}"
 href="../configuration.php?{$Session}">{$Configuration}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu_sel"><a accesskey="1" title="{$ArticleGroupsSub} - {$List}"
-href="list.php?{$Session}">AAAA{$ArticleGroupsSub}</a></td></tr>
+href="list.php?{$Session}">{$ArticleGroupsSub}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu_sub"><a accesskey="2" title="{$ArticleGroupsSub} - {$New}"
-href="new.php?{$Session}">BBB{$New}</a></td></tr>
+href="new.php?{$Session}">{$New}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu_sub"><a accesskey="3" title="{$ArticleGroupsSub} - {$Search}"
-href="search.php?{$Session}">CCCC{$Search}</a></td></tr>
+href="search.php?{$Session}">{$Search}</a></td></tr>
 <tr><td align="left" class="phprechnung_menu_sub"><a accesskey="4" title="{$ArticleGroupsSub} - {$Help}"
-href="help.php?{$Session}">DDD{$Help}</a></td></tr>
+href="help.php?{$Session}">{$Help}</a></td></tr>
 {if $smarty.session.Username and ( $smarty.session.Username != $Root )}
 	<tr><td align="left" class="phprechnung_menu"><a accesskey="U" title="{$Superuser}"
 	href="../login/sustart.php?{$Session}">{$Superuser}</a></td></tr>
@@ -86,29 +68,30 @@ href="help.php?{$Session}">DDD{$Help}</a></td></tr>
 	</td></tr>
 {/if}
 {if $smarty.session.EditID and ( $smarty.session.EditID eq 1 )}
-	<tr><td align="center" colspan="4" class="greentxt">{$EntryChanged} {$EntryNo} {$posgroupID}</td></tr>
+	<tr><td align="center" colspan="4" class="greentxt">{$EntryChanged} {$EntryNo} {$artgroupsID}</td></tr>
 {/if}
 {if $smarty.session.DeleteID and ( $smarty.session.DeleteID eq 1 )}
-	<tr><td align="center" colspan="4" class="greentxt">{$EntryDeleted} {$EntryNo} {$posgroupID}</td></tr>
+	<tr><td align="center" colspan="4" class="greentxt">{$EntryDeleted} {$EntryNo} {$artgroupsID}</td></tr>
 {/if}
 <tr><td></td></tr>
 <tr class="mblueTD">
 <td nowrap="nowrap" align="left">{$EntryNo}
-<a href="{$smarty.server.PHP_SELF}?{$AddCurrentPage}Order=POSGROUPID&amp;Sort=ASC&amp;{$Session}"><img border="0" src="../images/up.png" title="{$SortMsg} {$EntryNo} ASC" alt="{$SortMsg} {$EntryNo} ASC" /></a>&nbsp;<a href="{$smarty.server.PHP_SELF}?{$AddCurrentPage}Order=POSGROUPID&amp;Sort=DESC&amp;{$Session}"><img border="0" src="../images/down.png" title="{$SortMsg} {$EntryNo} DESC" alt="{$SortMsg} {$EntryNo} DESC" /></a>&nbsp;</td>
+<a href="{$smarty.server.PHP_SELF}?{$AddCurrentPage}Order=ARTGROUPSID&amp;Sort=ASC&amp;{$Session}"><img border="0" src="../images/up.png" title="{$SortMsg} {$EntryNo} ASC" alt="{$SortMsg} {$EntryNo} ASC" /></a>&nbsp;<a href="{$smarty.server.PHP_SELF}?{$AddCurrentPage}Order=ARTGROUPSID&amp;Sort=DESC&amp;{$Session}"><img border="0" src="../images/down.png" title="{$SortMsg} {$EntryNo} DESC" alt="{$SortMsg} {$EntryNo} DESC" /></a>&nbsp;</td>
 <td nowrap="nowrap" align="left">{$ArticleGroupsSub}
 <a href="{$smarty.server.PHP_SELF}?{$AddCurrentPage}Order=DESCRIPTION&amp;Sort=ASC&amp;{$Session}"><img border="0" src="../images/up.png" title="{$SortMsg} {$ArticleGroupsSub} ASC" alt="{$SortMsg} {$ArticleGroupsSub} ASC" /></a>&nbsp;<a href="{$smarty.server.PHP_SELF}?{$AddCurrentPage}Order=DESCRIPTION&amp;Sort=DESC&amp;{$Session}"><img border="0" src="../images/down.png" title="{$SortMsg} {$ArticleGroupsSub} DESC" alt="{$SortMsg} {$ArticleGroupsSub} DESC" /></a>&nbsp;</td>
 <td nowrap="nowrap" align="center" colspan="2">{$Entrys}:&nbsp;{$MaxRows}&nbsp;</td></tr>
 {* Display entrys from database if $MaxRows > 0 *}
 {if $MaxRows == 0}
-	<tr><td align="center" colspan="5" class="redtxt">{$NoEntry}</td></tr>
+	<tr><td align="center" colspan="5" class="redtxt">{$NoEntry}AAAAA</td></tr>
 {else}
-{foreach from=$PosGroupData item=posgroup}
+{foreach from=$ArtGroupsData item=artgroups}
 	<tr class="{cycle values="grayTD,wTD"}">
-	<td valign="top" align="left"><a name="{$posgroup.POSGROUPID}" title="{$AllInformation} {$EntryNo} {$posgroup.POSGROUPID} - {$posgroup.DESCRIPTION}" class="ninfolink" href="info.php?posgroupID={$posgroup.POSGROUPID}&amp;{$AddCurrentPage}Order={$Order}&amp;Sort={$Sort}&amp;{$Session}">
-	{$posgroup.POSGROUPID}</a></td><td valign="top" align="left">
-	{$posgroup.DESCRIPTION}</td>
+	<td valign="top" align="left">
+<a name="{$artgroups.ARTGROUPSID}" title="{$AllInformation} {$EntryNo} {$artgroups.ARTGROUPSID} - {$artgroups.DESCRIPTION}" class="ninfolink" href="info.php?artgroupsID={$artgroups.ARTGROUPSID}&amp;{$AddCurrentPage}Order={$Order}&amp;Sort={$Sort}&amp;{$Session}">
+	{$artgroups.ARTGROUPSID}</a></td><td valign="top" align="left">
+	{$artgroups.DESCRIPTION}</td>
 	{if $smarty.session.Username and ( $smarty.session.Username == $Root or $smarty.session.Usergroup1 == $AdminGroup1 or $smarty.session.Usergroup2 == $AdminGroup2)}
-		<td valign="top" align="center"><a href="edit.php?posgroupID={$posgroup.POSGROUPID}&amp;{$AddCurrentPage}Order={$Order}&amp;Sort={$Sort}&amp;{$Session}"><img border="0" src="../images/edit.png" title="{$Editentry}" alt="{$Editentry}" /></a></td></tr>
+		<td valign="top" align="center"><a href="edit.php?artgroupsID={$artgroups.ARTGROUPSID}&amp;{$AddCurrentPage}Order={$Order}&amp;Sort={$Sort}&amp;{$Session}"><img border="0" src="../images/edit.png" title="{$Editentry}" alt="{$Editentry}" /></a></td></tr>
 	{else}
 		<td></td></tr>
 	{/if}

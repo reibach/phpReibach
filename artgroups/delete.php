@@ -41,7 +41,7 @@ if(!is_numeric($artgroupsID) || $artgroupsID <= 0 )
 	die(header("Location: $web"));
 }
 
-$smarty->assign("Title","$a[position] - $a[art_groups] - $a[delete]");
+$smarty->assign("Title","$a[article] - $a[art_groups] - $a[delete]");
 
 $smarty->display('artgroups/delete.tpl');
 

@@ -1,28 +1,8 @@
-{*
-	new.tpl
-
-	phpRechnung - is easy-to-use Web-based multilingual accounting software.
-	Copyright (C) 2001 - 2010 Edy Corak < edy at loenshotel dot de >
-
-	This program is free software; you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation; either version 2 of the License, or
-	(at your option) any later version.
-
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with this program; if not, write to the Free Software
-	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-*}
 {include file="header.tpl"}
 {if $mark}
 	<body onload="document.New.{$mark}.focus();">
 {else}
-	<body onload="document.New.CPosGroup.focus();">
+	<body onload="document.New.CArtGroups.focus();">
 {/if}
 {include file="htable.tpl"}
 <table border="0" width="100%" cellspacing="0" cellpadding="0" summary="Tabelle 3">
@@ -82,17 +62,17 @@ href="help.php?{$Session}">{$Help}</a></td></tr>
 </tr>
 <tr><td align="center" colspan="2"><h2>{$ArticleGroupsSub} - {$New}</h2></td></tr>
 {if $smarty.session.NewID and ( $smarty.session.NewID eq 1 )}
-	<tr><td align="center" colspan="2" class="greentxt">{$NewEntry} {$EntryNo} {$PosGroupID}</td></tr>
+	<tr><td align="center" colspan="2" class="greentxt">{$NewEntry} {$EntryNo} {$ArtGroupsID}</td></tr>
 {/if}
 <tr><td></td></tr>
-<tr><td align="center" colspan="2" class="dbTxt">[ {$EntryNo} {$PosGroupID+1} ]</td></tr>
+<tr><td align="center" colspan="2" class="dbTxt">[ {$EntryNo} {$ArtGroupsID+1} ]</td></tr>
 <tr><td></td></tr>
 <tr><td valign="middle" align="center" colspan="2"><b>{$ArticleGroupsSub}:</b></td></tr>
-<tr><td valign="middle" align="center" colspan="2"><textarea title="{$ArticleGroupsSub}" class="form_textarea" name="CPosGroup" rows="5" cols="40">{$CPosGroup}</textarea></td></tr>
+<tr><td valign="middle" align="center" colspan="2"><textarea title="{$ArticleGroupsSub}" class="form_textarea" name="CArtGroups" rows="5" cols="40">{$CArtGroups}</textarea></td></tr>
 <tr><td></td></tr>
 <tr><td valign="top" align="center" colspan="2">
 <input type="hidden" name="page" value="{$page}" />
-<input type="hidden" name="posgroupID" value="{$posgroupID}" />
+<input type="hidden" name="artgroupsID" value="{$artgroupsID}" />
 <input type="hidden" name="infoID" value="{$infoID}" />
 <input type="hidden" name="Order" value="{$Order}" />
 <input type="hidden" name="Sort" value="{$Sort}" />

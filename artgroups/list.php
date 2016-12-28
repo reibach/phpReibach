@@ -32,7 +32,7 @@ if(empty($Order) || $Order !== 'artgroupsID' && $Order !== 'DESCRIPTION')
 	$Sort = "";
 }
 
-$smarty->assign("Title","$a[position] - $a[art_groups] - $a[list] - TEST");
+$smarty->assign("Title","$a[article] - $a[art_groups] - $a[list]");
 $smarty->assign("EntryChanged","$a[entry_changed]");
 $smarty->assign("EntryDeleted","$a[entry_deleted]");
 
@@ -44,7 +44,7 @@ $intCursor = ($page - 1) * $EntrysPerPage;
 
 // Get Position Group Information
 //
-$query = $db->Execute("SELECT artgroupsID, DESCRIPTION FROM artgroups ORDER BY $Order $Sort LIMIT $intCursor, $EntrysPerPage");
+$query = $db->Execute("SELECT ARTGROUPSID, DESCRIPTION FROM artgroups ORDER BY $Order $Sort LIMIT $intCursor, $EntrysPerPage");
 
 // If an error has occurred, display the error message
 //
@@ -65,15 +65,15 @@ else
 	//
 	$intPages = ceil($numrows/$EntrysPerPage);
 
-	// Save all entrys in $artgroupsData
+	// Save all entrys in $ArtGroupsData
 	//
 	foreach($query as $result)
 	{
-		$artgroupsData[] = $result;
+		$ArtGroupsData[] = $result;
 	}
 
-	if(isset($artgroupsData))
-		$smarty->assign('artgroupsData', $artgroupsData);
+	if(isset($ArtGroupsData))
+		$smarty->assign('ArtGroupsData', $ArtGroupsData);
 	$smarty->assign("PageRows","$pagenumrows");
 	$smarty->assign("MaxRows","$numrows");
 

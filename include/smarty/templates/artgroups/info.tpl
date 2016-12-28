@@ -1,23 +1,3 @@
-{*
-	info.tpl
-
-	phpRechnung - is easy-to-use Web-based multilingual accounting software.
-	Copyright (C) 2001 - 2010 Edy Corak < edy at loenshotel dot de >
-
-	This program is free software; you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation; either version 2 of the License, or
-	(at your option) any later version.
-
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with this program; if not, write to the Free Software
-	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-*}
 {include file="header.tpl"}
 <body>
 {include file="htable.tpl"}
@@ -74,27 +54,27 @@ href="help.php?{$Session}">{$Help}</a></td></tr>
 <tr><td></td></tr>
 {if $smarty.session.Username and ( $smarty.session.Username eq $Root)}
 	<tr><td align="center" colspan="2">
-	[&nbsp;<a title="{$Editentry}" class="nmenulink" href="edit.php?posgroupID={$posgroupID}&amp;infoID={$infoID}&amp;page={$page}&amp;Order={$Order}&amp;Sort={$Sort}&amp;Description_1={$Description_1}&amp;{$Session}">{$Edit}</a>
-	&nbsp;|&nbsp;<a title="{$Deleteentry}" class="nmenulink" href="delete.php?posgroupID={$posgroupID}&amp;infoID={$infoID}&amp;page={$page}&amp;Order={$Order}&amp;Sort={$Sort}&amp;Description_1={$Description_1}&amp;{$Session}">{$Delete}</a>&nbsp;]
+	[&nbsp;<a title="{$Editentry}" class="nmenulink" href="edit.php?artgroupsID={$artgroupsID}&amp;infoID={$infoID}&amp;page={$page}&amp;Order={$Order}&amp;Sort={$Sort}&amp;Description_1={$Description_1}&amp;{$Session}">{$Edit}</a>
+	&nbsp;|&nbsp;<a title="{$Deleteentry}" class="nmenulink" href="delete.php?artgroupsID={$artgroupsID}&amp;infoID={$infoID}&amp;page={$page}&amp;Order={$Order}&amp;Sort={$Sort}&amp;Description_1={$Description_1}&amp;{$Session}">{$Delete}</a>&nbsp;]
 	</td></tr>
 {/if}
 <tr><td></td></tr>
-<tr><td align="center" colspan="2">{$AllInformation} {$EntryNo} {$posgroupID}</td></tr>
+<tr><td align="center" colspan="2">{$AllInformation} {$EntryNo} {$artgroupsID}</td></tr>
 <tr><td></td></tr>
 <tr><td valign="middle" align="center" colspan="2"><b>{$ArticleGroupsSub}:</b></td></tr>
-<tr><td valign="middle" align="center" colspan="2">{$POSGROUP|nl2br}</td></tr>
+<tr><td valign="middle" align="center" colspan="2">{$ARTGROUPS|nl2br}</td></tr>
 <tr><td></td></tr>
 {* Display back button *}
 <tr><td valign="middle" align="center" width="100%" colspan="2">
 {if $infoID == 9}
-	<form action="searchlist.php?{$Session}#{$posgroupID}" method="post">
+	<form action="searchlist.php?{$Session}#{$artgroupsID}" method="post">
 	<input type="hidden" name="page" value="{$page}" />
 	<input type="hidden" name="Description_1" value="{$Description_1}" />
 	<input type="hidden" name="Order" value="{$Order}" />
 	<input type="hidden" name="Sort" value="{$Sort}" />
 	<input type="submit" class="button" title="{$BackMsg} - {$Searchresult}" value="{$BackMsg} - {$Searchresult}" /></form></td></tr>
 {else}
-	<form action="list.php?{$Session}#{$posgroupID}" method="post">
+	<form action="list.php?{$Session}#{$artgroupsID}" method="post">
 	<input type="hidden" name="page" value="{$page}" />
 	<input type="hidden" name="Order" value="{$Order}" />
 	<input type="hidden" name="Sort" value="{$Sort}" />
